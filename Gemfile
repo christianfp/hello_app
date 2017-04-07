@@ -48,10 +48,8 @@ group :production do
  gem 'pg', '0.18.4'
 end
 
-group :development, :test do
- gem 'sqlite3', '1.3.12'
- gem 'byebug', '9.0.0', platform: :mri
-end
+gem 'sqlite3', :group => [:development, :test]
+
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
